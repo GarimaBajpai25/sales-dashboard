@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sales Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- HEADER -->
+    <header>
+        <div>
+            <h1>📊 Sales Dashboard</h1>
+            <p>Superstore Sales Analysis</p>
+        </div>
+    </header>
+
+
+    <!-- FILTERS -->
+    <section class="filters">
+
+        <div class="filter-box">
+            <label>Region</label>
+            <select id="regionFilter">
+                <option value="All">All Regions</option>
+            </select>
+        </div>
+
+        <div class="filter-box">
+            <label>Category</label>
+            <select id="categoryFilter">
+                <option value="All">All Categories</option>
+            </select>
+        </div>
+
+        <div class="filter-box">
+            <label>Segment</label>
+            <select id="segmentFilter">
+                <option value="All">All Segments</option>
+            </select>
+        </div>
+
+        <button id="resetBtn">Reset Filters</button>
+
+    </section>
+
+
+    <!-- KPI CARDS -->
+    <section class="cards">
+
+        <div class="card">
+            <h3>Total Sales</h3>
+            <h2 id="totalSales">$0</h2>
+        </div>
+
+        <div class="card">
+            <h3>Total Profit</h3>
+            <h2 id="totalProfit">$0</h2>
+        </div>
+
+        <div class="card">
+            <h3>Total Orders</h3>
+            <h2 id="totalOrders">0</h2>
+        </div>
+
+        <div class="card">
+            <h3>Total Quantity</h3>
+            <h2 id="totalQuantity">0</h2>
+        </div>
+
+    </section>
+
+
+    <!-- SALES TREND -->
+    <section class="chart-grid">
+
+        <div class="chart-box large">
+            <h2>📈 Sales Trend</h2>
+            <canvas id="salesTrendChart"></canvas>
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORY + REGION -->
+    <section class="chart-grid">
+
+        <div class="chart-box">
+            <h2>📊 Sales by Category</h2>
+            <canvas id="categoryChart"></canvas>
+        </div>
+
+        <div class="chart-box">
+            <h2>📊 Sales by Region</h2>
+            <canvas id="regionChart"></canvas>
+        </div>
+
+    </section>
+
+
+    <!-- SEGMENT + PROFIT -->
+    <section class="chart-grid">
+
+        <div class="chart-box">
+            <h2>🍩 Sales by Segment</h2>
+            <canvas id="segmentChart"></canvas>
+        </div>
+
+        <div class="chart-box">
+            <h2>📈 Profit by Category</h2>
+            <canvas id="profitChart"></canvas>
+        </div>
+
+    </section>
+
+
+    <!-- TOP PRODUCTS -->
+    <section class="chart-grid">
+
+        <div class="chart-box large">
+            <h2>🏆 Top 10 Products by Sales</h2>
+            <canvas id="topProductsChart"></canvas>
+        </div>
+
+    </section>
+
+
+    <!-- ERROR -->
+    <div id="errorMessage"></div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
