@@ -1,0 +1,30 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# VS Code Settings
+.vscode/
+
+# Temporary Files
+*.tmp
+*.temp
+*.log
+
+# Node.js dependencies (if added in future)
+node_modules/
+
+# Environment Variables
+.env
+.env.local
+
+# Build / Distribution folders
+dist/
+build/
+
+# Backup Files
+*.bak
+*.swp
+
+# Python cache (if Python is added in future)
+__pycache__/
+*.pyc
